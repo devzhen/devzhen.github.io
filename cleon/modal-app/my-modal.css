@@ -1,0 +1,89 @@
+.disable {
+    pointer-events: none;
+}
+
+#modal-module-rotate-ball {
+    position: absolute;
+    z-index: 1000;
+    width: 120px;
+    height: 120px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #eb6529;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    -ms-animation: spin 2s linear infinite;
+    -o-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-module-content {
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: auto;
+    background-color: #f0cc46;
+    padding: 15px;
+    border: 1px solid #eb6529;
+    border-radius: 10px;
+    font-family: 'RobotoMedium';
+    font-size: 24px;
+}
+
+.modal-module-content > p {
+    margin: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* The Close Button */
+.modal-module-close {
+    color: grey;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-module-close:hover,
+.modal-module-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

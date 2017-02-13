@@ -1,0 +1,140 @@
+#drag-area1 {
+    position: absolute;
+    /*border: 1px solid red;*/
+    left: 191px;
+    top: 65px;
+    width: 363px;
+    height: 630px;
+}
+
+#drag-area2 {
+    position: absolute;
+    /*border: 1px solid green;*/
+    top: 96px;
+    left: 191px;
+    width: 440px;
+    height: 600px;
+}
+
+#drag-area3 {
+    position: absolute;
+    /*border: 1px solid blue;*/
+    top: 511px;
+    width: 483px;
+    height: 383px;
+}
+
+#drag-area4 {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 94px;
+    width: 100%;
+    height: 518px;
+}
+
+#drag-area5 {
+    position: absolute;
+    /*border: 1px solid green;*/
+    top: 59px;
+    width: 554px;
+    height: 553px;
+}
+
+#drag-area6 {
+    position: absolute;
+    /*border: 1px solid blue;*/
+    top: 94px;
+    left: 381px;
+    width: 251px;
+    height: 801px;
+}
+
+#drag-area7 {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 378px;
+    left: 0;
+    width: 548px;
+    height: 518px;
+}
+
+#drag-area8 {
+    position: absolute;
+    /*border: 1px solid green;*/
+    top: 473px;
+    left: 0;
+    width: 633px;
+    height: 422px;
+}
+
+#drag-area9 {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 154px;
+    left: 540px;
+    width: 328px;
+    height: 595px;
+}
+
+#drag-area10 {
+    position: absolute;
+    /*border: 1px solid green;*/
+    top: 58px;
+    left: 418px;
+    width: 376px;
+    height: 370px;
+}
+
+#drag-area11 {
+    position: absolute;
+    /*border: 1px solid blue;*/
+    top: 358px;
+    left: 540px;
+    width: 581px;
+    height: 391px;
+}
+
+#drag-area12 {
+    position: absolute;
+    /*border: 1px solid yellow;*/
+    top: 358px;
+    left: 540px;
+    width: 725px;
+    height: 337px;
+}
+
+#drag-area13 {
+    position: absolute;
+    /*border: 1px solid red;*/
+    top: 155px;
+    left: 102px;
+    width: 600px;
+    height: 529px;
+}
+
+#drag-area14 {
+    position: absolute;
+    /*border: 1px solid green;*/
+    top: 59px;
+    left: 102px;
+    width: 530px;
+    height: 625px;
+}
+
+#drag-area15 {
+    position: absolute;
+    /*border: 1px solid blue;*/
+    top: 260px;
+    left: 102px;
+    width: 1163px;
+    height: 423px;
+}
+
+#drag-area16 {
+    position: absolute;
+    /*border: 1px solid yellow;*/
+    top: 260px;
+    left: 647px;
+    width: 307px;
+    height: 635px;
+}

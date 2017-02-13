@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cleonApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="cleon">
+    <meta name="keywords" content="cleon">
+    <title>cleon</title>
+
+
+    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="modal-app/my-modal.css" rel="stylesheet">
+    <link href="draggable-app/my-draggable.css" rel="stylesheet">
+    <link href="cleon-app/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container" ng-controller="ScreenController as screenCtrl">
+
+    <div id="screen1" ng-show="screenCtrl.isSetScreen(FIRST_SCREEN)" class="scrin-1"><!---->
+        <header>
+            <div class="row">
+                <div class="header-top">
+
+                </div>
+                <div class="header-bottom">
+                    <div class="header-logo">
+                        <div class="header-column"></div>
+                        <div class="header-logo-title-top">clÈon</div>
+                        <div class="header-logo-title-bottom">l`usine incontournable pour l`automobile de demain</div>
+                    </div>
+                    <div class="header-block-step-right" ng-click="screenCtrl.setScreen(SECOND_SCREEN)">
+                        <img src="cleon-app/images/step-right.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <section class="section-1">
+            <div class="row">
+
+                <div class="section-1-left" ng-controller="StickerController as stickerCtrl"
+                     ng-init="stickerCtrl.setBoard('left')">
+
+                    <div id="drag-area1"></div>
+                    <div id="drag-area2"></div>
+                    <div id="drag-area3"></div>
+
+                    <div class="section-1-title-left">
+                        <div class="section-1-title-left-left">
+                            <img src="cleon-app/images/gerb-1.png" alt="#">
+                        </div>
+                        <div class="section-1-title-left-right">
+                            sÈcuritÈ
+                        </div>
+                    </div>
+
+                    <img id="a4-1" draggable="false" src="cleon-app/images/a4-1.jpg" alt="#"
+                         image-popup-src="cleon-app/images/a4-1-big.jpg"/>
+
+                    <img id="a4-2" draggable="false" src="cleon-app/images/a4-2.jpg" alt="#"
+                         image-popup-src="cleon-app/images/a4-2.jpg"/>
+
+                    <img id="a4-3" draggable="false" src="cleon-app/images/a4-3.jpg" alt="#"
+                         image-popup-src="cleon-app/images/a4-3.jpg"/>
+
+                    <img id="a4-4" draggable="false" src="cleon-app/images/a4-4.jpg" alt="#"
+                         image-popup-src="cleon-app/images/a4-4.jpg"/>
+
+
+                    <div class="left-add" ng-click="stickerCtrl.addSticker($event)">
+                        <div class="left-add-title">+</div>
+                    </div>
+                    <div class="left-delete" ng-click="stickerCtrl.deleteSticker($event)">
+                        <div class="left-delete-title">-</div>
+                    </div>
+
+                </div>
+
+                <div class="section-1-right">
+                    <div class="section-1-right-top">
+                        <div class="section-1-right-top-block center-block">
+                            <img src="cleon-app/images/graf.png" alt="#">
+                            <div class="section-1-right-top-title">
+                                management de proximitÈ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-pole">
+                    </div>
+                    <div class="block-img">
+                        <div class="row">
+
+
+                            <img id="a3-1" draggable="false" src="cleon-app/images/a3-1.jpg" alt="#"
+                                 image-popup-src="cleon-app/images/a3-1.jpg"/>
+
+                            <img id="a3-2" draggable="false" src="cleon-app/images/a3-2.jpg" alt="#"
+                                 image-popup-src="cleon-app/images/a3-2.jpg"/>
+
+                            <img id="a3-3" draggable="false" src="cleon-app/images/a3-3.jpg" alt="#"
+                                 image-popup-src="cleon-app/images/a3-3.jpg"/>
+
+                            <img id="a3-4" draggable="false" src="cleon-app/images/a3-4.jpg" alt="#"
+                                 image-popup-src="cleon-app/images/a3-4.jpg"/>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <div class="footer-top">
+                    <div class="footer-block-red">
+                        <div class="pagination-numbe">
+                            1
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            2
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            3
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            4
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            5
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            6
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            7
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            9
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            8
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe-end">
+                            10
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-bottom">
+
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <div id="screen2" ng-show="screenCtrl.isSetScreen(SECOND_SCREEN)" class="scrin-2"><!---->
+        <header>
+            <div class="row">
+                <div class="header-top">
+
+                </div>
+                <div class="header-bottom">
+                    <div class="header-block-step-left" ng-click="screenCtrl.setScreen(FIRST_SCREEN)">
+                        <img src="cleon-app/images/step-left.png" alt="">
+                    </div>
+                    <div class="scrin-2-header-title center-block">
+                        Animation uet
+                    </div>
+                    <div class="header-block-step-right" ng-click="screenCtrl.setScreen(THIRD_SCREEN)">
+                        <img src="cleon-app/images/step-right.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <section class="section-1">
+            <div class="row">
+
+                <div class="section-1-left" ng-controller="StickerController as stickerCtrl"
+                     ng-init="stickerCtrl.setBoard('left')">
+
+                    <div id="drag-area4"></div>
+                    <div id="drag-area5"></div>
+                    <div id="drag-area6"></div>
+
+                    <div class="section-1-title-left">
+                        <div class="section-1-title-left-left">
+                            <img src="cleon-app/images/gerb-2.png" alt="#">
+                        </div>
+                        <div class="section-1-title-left-right">
+                            volumes de production
+                        </div>
+                    </div>
+
+                    <div class="scrin-2-left-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                        <div class="left-add-title">+</div>
+                    </div>
+                    <div class="scrin-2-left-delete left-delete" ng-click="stickerCtrl.deleteSticker($event)">
+                        <div class="left-delete-title">-</div>
+                    </div>
+
+
+                    <img id="scrin-2-a4-1" draggable="false" src="cleon-app/images/scrin-2-a4-1.jpg" alt="#"
+                         image-popup-src="cleon-app/images/scrin-2-a4-1.jpg"/>
+
+                </div>
+
+                <div class="section-1-right" ng-controller="StickerController as stickerCtrl"
+                     ng-init="stickerCtrl.setBoard('right')">
+
+                    <div id="drag-area9"></div>
+                    <div id="drag-area10"></div>
+                    <div id="drag-area11"></div>
+                    <div id="drag-area12"></div>
+
+                    <div class="row">
+                        <div class="section-1-right-top">
+                            <div class="section-1-right-top-block center-block">
+                                <img src="cleon-app/images/scrin-2-graf.png" alt="#">
+                                <div class="section-1-right-top-title">
+                                    conformité au poste
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="section-1-right-content">
+
+
+                            <img id="scrin-2-a2-top" draggable="false" src="cleon-app/images/scrin-2-a2-top.jpg" alt="#"
+                                 image-popup-src="cleon-app/images/scrin-2-a2-top.jpg"/>
+
+
+                            <div class="scrin-2-right-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                <div class="right-add-title left-add-title">+</div>
+                            </div>
+                            <div class="scrin-2-right-delete left-delete" ng-click="stickerCtrl.deleteSticker($event)">
+                                <div class="left-delete-title">-</div>
+                            </div>
+                            <div class="scrin2-block-img-top">
+
+                                <img id="block-scrin-2-a4-1" draggable="false"
+                                     src="cleon-app/images/scrin-2-a4-top1.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin-2-a4-top1.jpg"/>
+
+                                <img id="block-scrin-2-a4-2" draggable="false"
+                                     src="cleon-app/images/scrin-2-a4-top2.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin-2-a4-top2.jpg"/>
+
+                                <img id="block-scrin-2-a4-3" draggable="false"
+                                     src="cleon-app/images/scrin-2-a4-top3.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin-2-a4-top3.jpg"/>
+
+                                <img id="block-scrin-2-a4-4" draggable="false"
+                                     src="cleon-app/images/scrin-2-a4-top4.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin-2-a4-top4.jpg"/>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="scrin-2-table">
+                            <div id="scrin-2-table-min" class="scrin-2-table-min">
+                                <img src="cleon-app/images/scrin-2-table-big.jpg" alt="#"
+                                     image-width-transition="935px">
+                            </div>
+                            <!--<div id="scrin-2-table-big" class="scrin-2-table-big"><img
+                                    src="./images/scrin-2-table-big.jpg" alt="#"></div>-->
+                        </div>
+                        <div class="scrin2-block-img-bottom">
+
+
+                            <img id="scrin-2-a4-bottom1" draggable="false" src="cleon-app/images/scrin-2-a4-bottom1.jpg"
+                                 alt="#" image-popup-src="cleon-app/images/scrin-2-a4-bottom1.jpg">
+
+                            <img id="scrin-2-a4-bottom2" draggable="false" src="cleon-app/images/scrin-2-a4-bottom2.jpg"
+                                 alt="#" image-popup-src="cleon-app/images/scrin-2-a4-bottom2.jpg">
+
+                            <img id="scrin-2-a4-bottom3" draggable="false" src="cleon-app/images/scrin-2-a4-bottom3.jpg"
+                                 alt="#" image-popup-src="cleon-app/images/scrin-2-a4-bottom3.jpg">
+
+                            <img id="scrin-2-a4-bottom4" draggable="false" src="cleon-app/images/scrin-2-a4-bottom4.jpg"
+                                 alt="#" image-popup-src="cleon-app/images/scrin-2-a4-bottom4.jpg">
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="footer-top">
+                    <div class="footer-block-red">
+                        <div class="pagination-numbe">
+                            1
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            2
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            3
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            4
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            5
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            6
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            7
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <div class="footer-block-white">
+                        <div class="pagination-numbe">
+                            8
+                        </div>
+                        <div class="pagination-title">
+                            Pagination<br>item name
+                        </div>
+                    </div>
+                    <!--<div class="footer-block-white">-->
+                    <!--<div class="pagination-numbe">-->
+                    <!--9-->
+                    <!--</div>-->
+                    <!--<div class="pagination-title">-->
+                    <!--Pagination<br>item name-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="footer-block-white">-->
+                    <!--<div class="pagination-numbe-end">-->
+                    <!--10-->
+                    <!--</div>-->
+                    <!--<div class="pagination-title">-->
+                    <!--Pagination<br>item name-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-bottom">
+
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+
+    <div id="screen3" ng-show="screenCtrl.isSetScreen(THIRD_SCREEN)" class="scrin-3"><!---->
+        <header>
+            <div class="row">
+                <div class="header-top">
+
+                </div>
+                <div class="header-bottom">
+                    <div class="header-block-step-left" ng-click="screenCtrl.setScreen(SECOND_SCREEN)">
+                        <img src="cleon-app/images/step-left.png" alt="">
+                    </div>
+                    <div class="header-logo">
+                        <div class="header-column"></div>
+                        <div class="header-logo-title-top">clÈon</div>
+                        <div class="header-logo-title-bottom">l`usine incontournable pour l`automobile de demain</div>
+                    </div>
+                    <div class="header-block-step-right">
+                        <img src="cleon-app/images/step-right.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+        <section class="section-1">
+            <div class="row">
+
+                <div class="section-1-left" ng-controller="StickerController as stickerCtrl"
+                     ng-init="stickerCtrl.setBoard('left')">
+
+                    <div id="drag-area7"></div>
+                    <div id="drag-area8"></div>
+
+                    <div class="section-1-title-left">
+                        <div class="section-1-title-left-left">
+                            <img src="cleon-app/images/gerb-3.png" alt="#">
+                        </div>
+                        <div class="section-1-title-left-right">
+                            actualités usine
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="scrin3-left-block-img">
+
+
+                            <img id="scrin3-a3-left1" src="cleon-app/images/scrin3-a3-left1.jpg" alt="#"
+                                 draggable="false" image-popup-src="cleon-app/images/scrin3-a3-left1.jpg"/>
+
+                            <img id="scrin3-a3-left2" src="cleon-app/images/scrin3-a3-left2.jpg" alt="#"
+                                 draggable="false" image-popup-src="cleon-app/images/scrin3-a3-left2.jpg"/>
+
+                            <img id="scrin3-a3-left3" src="cleon-app/images/scrin3-a3-left3.jpg" alt="#"
+                                 draggable="false" image-popup-src="cleon-app/images/scrin3-a3-left3.jpg"/>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="scrin3-left-block-stiket">
+                            <div class="scrin-2-left-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                <div class="left-add-title">+</div>
+                            </div>
+                            <div class="scrin-2-left-delete left-delete" ng-click="stickerCtrl.deleteSticker($event)">
+                                <div class="left-delete-title">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-1-right" ng-controller="UetController as uetCtrl">
+
+                    <div id="drag-area13"></div>
+                    <div id="drag-area14"></div>
+                    <div id="drag-area15"></div>
+                    <div id="drag-area16"></div>
+
+                    <div class="section-1-right-tab">
+                        <!--begn li для табов-->
+                        <ul class="nav nav-tabs tabs-left">
+                            <li class="active">
+                                <a data-toggle="tab">
+                                    <div class="uet" ng-click="uetCtrl.setUet(FIRST_UET)">
+                                        <div class="uet-title">
+                                            <div class="uet-title-text">
+                                                uet 1
+                                            </div>
+                                            <div class="uet-title-border">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab">
+                                    <div class="uet uet-active" ng-click="uetCtrl.setUet(SECOND_UET)">
+                                        <div class="uet-title">
+                                            <div class="uet-title-text">
+                                                uet 2
+                                            </div>
+                                            <div class="uet-title-border">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab">
+                                    <div class="uet" ng-click="uetCtrl.setUet(THIRD_UET)">
+                                        <div class="uet-title">
+                                            <div class="uet-title-text">
+                                                uet 3
+                                            </div>
+                                            <div class="uet-title-border">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab">
+                                    <div class="uet" ng-click="uetCtrl.setUet(FOURTH_UET)">
+                                        <div class="uet-title">
+                                            <div class="uet-title-text">
+                                                uet 4
+                                            </div>
+                                            <div class="uet-title-border">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab">
+                                    <div class="uet" ng-click="uetCtrl.setUet(FIFTH_UET)">
+                                        <div class="uet-title">
+                                            <div class="uet-title-text">
+                                                uet 5
+                                            </div>
+                                            <div class="uet-title-border">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!--end li для табов-->
+                    </div>
+                    <div class="section-1-right-content">
+                        <div class="row">
+
+                            <div class="uet-content" id="uet1" ng-show="uetCtrl.isSetUet(FIRST_UET)"
+                                 ng-controller="StickerController as stickerCtrl"
+                                 ng-init="stickerCtrl.setBoard('right')">
+
+
+                                <div class="section-1-right-top-block center-block">
+                                    <img src="cleon-app/images/scrin-3-graf.png" alt="#">
+                                    <div class="section-1-right-top-title">
+                                        vie de l’uet
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-left">
+                                    <div class="scrin-3-right-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                        <div class="right-add-title left-add-title">+</div>
+                                    </div>
+                                    <div class="scrin-3-right-delete left-delete"
+                                         ng-click="stickerCtrl.deleteSticker($event)">
+                                        <div class="left-delete-title">-</div>
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-right">
+
+                                    <img class="scrin3-a3-right1" draggable="false"
+                                         src="cleon-app/images/scrin3-a3-right1.jpg" alt="#"
+                                         image-popup-src="cleon-app/images/scrin3-a3-right1.jpg"/>
+
+                                    <img class="scrin3-a3-right2" draggable="false"
+                                         src="cleon-app/images/scrin3-a3-right2.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/scrin3-a3-right2.jpg"/>
+
+                                </div>
+
+                                <img class="scrin3-a4-right1" draggable="false"
+                                     src="cleon-app/images/scrin3-a4-right1.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin3-a4-right1.jpg"/>
+
+                                <img class="scrin3-a4-right2" draggable="false"
+                                     src="cleon-app/images/scrin3-a4-right2.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin3-a4-right2.jpg"/>
+
+                                <img class="scrin3-a3-right3" draggable="false"
+                                     src="cleon-app/images/scrin3-a3-right3.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin3-a3-right3.jpg"/>
+
+                                <img class="scrin3-a3-right4" draggable="false"
+                                     src="cleon-app/images/scrin3-a3-right4.jpg"
+                                     alt="#" image-popup-src="cleon-app/images/scrin3-a3-right4.jpg"/>
+
+
+                            </div>
+                            <div class="uet-content" id="uet2" ng-show="uetCtrl.isSetUet(SECOND_UET)"
+                                 ng-controller="StickerController as stickerCtrl"
+                                 ng-init="stickerCtrl.setBoard('right')">
+
+                                <div class="section-1-right-top-block center-block">
+                                    <img src="cleon-app/images/scrin-3-graf.png" alt="#">
+                                    <div class="section-1-right-top-title">
+                                        vie de l’uet
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-left">
+                                    <div class="scrin-3-right-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                        <div class="right-add-title left-add-title">+</div>
+                                    </div>
+                                    <div class="scrin-3-right-delete left-delete"
+                                         ng-click="stickerCtrl.deleteSticker($event)">
+                                        <div class="left-delete-title">-</div>
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-right">
+
+                                    <img class="scrin3-a3-right1" draggable="false" src="cleon-app/images/1.jpg" alt="#"
+                                         image-popup-src="cleon-app/images/1.jpg"/>
+
+                                    <img class="scrin3-a3-right2" draggable="false" src="cleon-app/images/2.jpg" alt="#"
+                                         image-popup-src="cleon-app/images/2.jpg"/>
+                                </div>
+
+
+                                <img class="scrin3-a4-right1" draggable="false" src="cleon-app/images/17.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/17.jpg"/>
+
+                                <img class="scrin3-a4-right2" draggable="false" src="cleon-app/images/18.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/18.jpg"/>
+
+                                <img class="scrin3-a3-right3" draggable="false" src="cleon-app/images/3.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/3.jpg"/>
+
+                                <img class="scrin3-a3-right4" draggable="false" src="cleon-app/images/4.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/4.jpg"/>
+
+                            </div>
+                            <div class="uet-content" id="uet3" ng-show="uetCtrl.isSetUet(THIRD_UET)"
+                                 ng-controller="StickerController as stickerCtrl"
+                                 ng-init="stickerCtrl.setBoard('right')">
+
+                                <div class="section-1-right-top-block center-block">
+                                    <img src="cleon-app/images/scrin-3-graf.png" alt="#">
+                                    <div class="section-1-right-top-title">
+                                        vie de l’uet
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-left">
+                                    <div class="scrin-3-right-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                        <div class="right-add-title left-add-title">+</div>
+                                    </div>
+                                    <div class="scrin-3-right-delete left-delete"
+                                         ng-click="stickerCtrl.deleteSticker($event)">
+                                        <div class="left-delete-title">-</div>
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-right">
+
+                                    <img class="scrin3-a3-right1" draggable="false" src="cleon-app/images/5.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/5.jpg"/>
+
+                                    <img class="scrin3-a3-right2" draggable="false" src="cleon-app/images/6.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/6.jpg"/>
+
+                                </div>
+
+
+                                <img class="scrin3-a4-right1" draggable="false" src="cleon-app/images/19.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/19.jpg"/>
+
+                                <img class="scrin3-a4-right2" draggable="false" src="cleon-app/images/20.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/20.jpg"/>
+
+                                <img class="scrin3-a3-right3" draggable="false" src="cleon-app/images/7.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/7.jpg"/>
+
+                                <img class="scrin3-a3-right4" draggable="false" src="cleon-app/images/8.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/8.jpg"/>
+
+                            </div>
+                            <div class="uet-content" id="uet4" ng-show="uetCtrl.isSetUet(FOURTH_UET)"
+                                 ng-controller="StickerController as stickerCtrl"
+                                 ng-init="stickerCtrl.setBoard('right')">
+
+                                <div class="section-1-right-top-block center-block">
+                                    <img src="cleon-app/images/scrin-3-graf.png" alt="#">
+                                    <div class="section-1-right-top-title">
+                                        vie de l’uet
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-left">
+                                    <div class="scrin-3-right-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                        <div class="right-add-title left-add-title">+</div>
+                                    </div>
+                                    <div class="scrin-3-right-delete left-delete"
+                                         ng-click="stickerCtrl.deleteSticker($event)">
+                                        <div class="left-delete-title">-</div>
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-right">
+
+                                    <img class="scrin3-a3-right1" draggable="false" src="cleon-app/images/9.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/9.jpg"/>
+
+                                    <img class="scrin3-a3-right2" draggable="false" src="cleon-app/images/10.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/10.jpg"/>
+
+                                </div>
+
+
+                                <img class="scrin3-a4-right1" draggable="false" src="cleon-app/images/21.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/21.jpg"/>
+
+                                <img class="scrin3-a4-right2" draggable="false" src="cleon-app/images/22.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/22.jpg"/>
+
+                                <img class="scrin3-a3-right3" draggable="false" src="cleon-app/images/11.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/11.jpg"/>
+
+                                <img class="scrin3-a3-right4" draggable="false" src="cleon-app/images/12.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/12.jpg"/>
+
+                            </div>
+                            <div class="uet-content" id="uet5" ng-show="uetCtrl.isSetUet(FIFTH_UET)"
+                                 ng-controller="StickerController as stickerCtrl"
+                                 ng-init="stickerCtrl.setBoard('right')">
+
+                                <div class="section-1-right-top-block center-block">
+                                    <img src="cleon-app/images/scrin-3-graf.png" alt="#">
+                                    <div class="section-1-right-top-title">
+                                        vie de l’uet
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-left">
+                                    <div class="scrin-3-right-add left-add" ng-click="stickerCtrl.addSticker($event)">
+                                        <div class="right-add-title left-add-title">+</div>
+                                    </div>
+                                    <div class="scrin-3-right-delete left-delete"
+                                         ng-click="stickerCtrl.deleteSticker($event)">
+                                        <div class="left-delete-title">-</div>
+                                    </div>
+                                </div>
+
+                                <div class="scrin-block-right">
+
+                                    <img class="scrin3-a3-right1" draggable="false" src="cleon-app/images/13.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/13.jpg"/>
+
+                                    <img class="scrin3-a3-right2" draggable="false" src="cleon-app/images/14.jpg"
+                                         alt="#" image-popup-src="cleon-app/images/14.jpg"/>
+
+                                </div>
+
+
+                                <img class="scrin3-a4-right1" draggable="false" src="cleon-app/images/23.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/23.jpg"/>
+
+                                <img class="scrin3-a4-right2" draggable="false" src="cleon-app/images/24.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/24.jpg"/>
+
+                                <img class="scrin3-a3-right3" draggable="false" src="cleon-app/images/15.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/15.jpg"/>
+
+                                <img class="scrin3-a3-right4" draggable="false" src="cleon-app/images/16.jpg" alt="#"
+                                     image-popup-src="cleon-app/images/16.jpg"/>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <div class="footer-top">
+                    <div class="footer-top-title text-center">
+                        Fiers, perfomants et audacieux
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-bottom">
+
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+
+</div>
+
+
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/jquery/jquery.nicescroll.min.js"></script>
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+<script src="assets/angular/angular.min.js"></script>
+<script src="cleon-app/js/main.js"></script>
+<script src="modal-app/my-modal.js"></script>
+<script src="draggable-app/my-draggable.js"></script>
+<script src="image-animate-app/image-animate.js"></script>
+<script src="cleon-app/js/controllers/screen-controller.js"></script>
+<script src="cleon-app/js/controllers/uet-controller.js"></script>
+<script src="cleon-app/js/controllers/sticker-controller.js"></script>
+<script src="cleon-app/js/directives/sticker-big.js"></script>
+<script src="cleon-app/js/directives/sticker-small.js"></script>
+<script src="cleon-app/js/directives/sticker-big-editable.js"></script>
+<script src="cleon-app/js/services/sticker-service-dom.js"></script>
+<script src="cleon-app/js/services/sticker-service-json.js"></script>
+</body>
+</html>
