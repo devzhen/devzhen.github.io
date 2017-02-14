@@ -33,10 +33,10 @@ module.directive('stickerSmall', ['stickerServiceDOM', function (stickerServiceD
         '<div class="stiket-bottom">' +
         '<div class="stiket-name">{{author}}</div>' +
         '<div class="stiket-reg">' +
-        '<img id="edit" src="cleon-app/images/reg.png" alt="#" ng-click="edit()">' +
+        '<img id="edit" src="../../images/reg.png" alt="#" ng-click="edit()">' +
         '</div>' +
         '<div class="stiket-del">' +
-        '<img id="delete" src="cleon-app/images/del.png" alt="#" ng-click="delete()">' +
+        '<img id="delete" src="../../images/del.png" alt="#" ng-click="delete()">' +
         '</div>' +
         '</div>' +
         '</div>',

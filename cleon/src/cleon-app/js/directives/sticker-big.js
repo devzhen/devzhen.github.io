@@ -26,10 +26,10 @@
             '<textarea name="author" ng-model="author" maxlength="18" style="resize: none"></textarea> ' +
             '</div> ' +
             '<div class="stiket-big-check"> ' +
-            '<img src="cleon-app/images/check.png" alt="#" ng-click="save()"> ' +
+            '<img src="../../images/check.png" alt="#" ng-click="save()"> ' +
             '</div> ' +
             '<div class="stiket-big-cross"> ' +
-            '<img src="cleon-app/images/cross.png" alt="#" ng-click="cancel()"> ' +
+            '<img src="../../images/cross.png" alt="#" ng-click="cancel()"> ' +
             '</div> ' +
             '</div> ' +
             '</div>',
