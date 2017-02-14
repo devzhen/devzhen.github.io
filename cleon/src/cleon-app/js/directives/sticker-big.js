@@ -26,15 +26,16 @@
             '<textarea name="author" ng-model="author" maxlength="18" style="resize: none"></textarea> ' +
             '</div> ' +
             '<div class="stiket-big-check"> ' +
-            '<img src="../../images/check.png" alt="#" ng-click="save()"> ' +
+            '<img src="src/cleon-app/images/check.png" alt="#" ng-click="save()"> ' +
             '</div> ' +
             '<div class="stiket-big-cross"> ' +
-            '<img src="../../images/cross.png" alt="#" ng-click="cancel()"> ' +
+            '<img src="src/cleon-app/images/cross.png" alt="#" ng-click="cancel()"> ' +
             '</div> ' +
             '</div> ' +
             '</div>',
             link: function ($scope, $element) {
-
+                /*D:\OpenServer\domains\localhost\projects\devzhen.github.io\cleon\src\cleon-app\images\check.png
+                 D:\OpenServer\domains\localhost\projects\devzhen.github.io\cleon\src\cleon-app\js\directives\sticker-big.js*/
                 // custom scrollbar
                 var textarea = $element.find('textarea[name="comment"]');
                 textarea.niceScroll({

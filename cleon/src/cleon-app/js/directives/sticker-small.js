@@ -33,10 +33,10 @@ module.directive('stickerSmall', ['stickerServiceDOM', function (stickerServiceD
         '<div class="stiket-bottom">' +
         '<div class="stiket-name">{{author}}</div>' +
         '<div class="stiket-reg">' +
-        '<img id="edit" src="../../images/reg.png" alt="#" ng-click="edit()">' +
+        '<img id="edit" src="src/cleon-app/images/reg.png" alt="#" ng-click="edit()">' +
         '</div>' +
         '<div class="stiket-del">' +
-        '<img id="delete" src="../../images/del.png" alt="#" ng-click="delete()">' +
+        '<img id="delete" src="src/cleon-app/images/del.png" alt="#" ng-click="delete()">' +
         '</div>' +
         '</div>' +
         '</div>',
@@ -44,14 +44,14 @@ module.directive('stickerSmall', ['stickerServiceDOM', function (stickerServiceD
             $element.on('mouseover', function (event) {
                 if (event.target == $element.find('#edit')[0]) {
                     $element.css('cursor', 'pointer');
-                    $element.find('#edit').attr('src', 'cleon-app/images/reg-hover.png');
+                    $element.find('#edit').attr('src', 'src/cleon-app/images/reg-hover.png');
                 }
             });
 
             $element.on('mouseout', function (event) {
                 if (event.target == $element.find('#edit')[0]) {
                     $element.css('cursor', 'default');
-                    $element.find('#edit').attr('src', 'cleon-app/images/reg.png');
+                    $element.find('#edit').attr('src', 'src/cleon-app/images/reg.png');
                 }
             });
 
