@@ -1,10 +1,10 @@
 (function (module) {
 
-    module.directive('stickerBig', ['stickerServiceDOM', function (stickerServiceDOM) {
+    module.directive('stickerBig', ['stickerServiceDOM', '$document', function (stickerServiceDOM, $document) {
         return {
             restrict: 'E',
             replace: true,
-            controller: function ($scope, $element, $attrs) {
+            controller: function ($scope, $element) {
                 $scope.date = new Date().getTime();
                 $scope.comment = "Enter text here...";
                 $scope.author = "Entrez votre nom";
@@ -35,21 +35,18 @@
             '</div>',
             link: function ($scope, $element) {
 
-                /*$('#test').on('keyup', function () {
-                    console.log('clientHeight - ' + $('#test')[0].clientHeight);
-                    console.log('scrollHeight - ' + $('#test')[0].scrollHeight);
-                    console.log('clientWidth - ' + $('#test')[0].clientWidth);
-                    console.log('offsetWidth - ' + $('#test')[0].offsetWidth);
-                    console.log('scrollTop - ' + $('#test')[0].scrollTop);
-                    console.log('\n');
-                });*/
-
                 // custom scrollbar
-                $element.find('textarea[name="comment"]').niceScroll({
+                var textarea = $element.find('textarea[name="comment"]');
+                textarea.niceScroll({
                     cursorcolor: "#eb6529",
-                    autohidemode:false,
+                    autohidemode: false,
                     cursorwidth: "15px"
                 });
+
+                textarea.on('paste', function () {
+                    textarea.getNiceScroll().resize();
+                });
+
             }
         };
     }]);
