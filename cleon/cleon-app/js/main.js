@@ -1,8 +1,9 @@
 (function (angular) {
 
-    var module = angular.module('cleonApp', ['modalApp', 'draggableApp', 'imagePopupApp']);
+    var ngModule = angular.module('cleonApp', ['modalApp', 'draggableApp', 'imagePopupApp']);
 
-    module.run(['$rootScope', 'modalService', 'stickerServiceJSON', function ($rootScope, modalService, stickerServiceJSON) {
+
+    ngModule.run(['$rootScope', 'modalService', 'stickerServiceJSON', function ($rootScope, modalService, stickerServiceJSON) {
 
         $rootScope.FIRST_SCREEN = 1;
         $rootScope.SECOND_SCREEN = 2;
@@ -22,5 +23,5 @@
         });
     }]);
 
-
 })(window.angular);
+

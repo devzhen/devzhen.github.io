@@ -1,6 +1,6 @@
-(function (module) {
+(function (ngModule) {
 
-    module.controller('StickerController', ['$scope', '$element', 'stickerServiceDOM', function ($scope, $element, stickerServiceDOM) {
+    ngModule.controller('StickerController', ['$scope', '$element', 'stickerServiceDOM', function ($scope, $element, stickerServiceDOM) {
 
         this.setBoard = function (board) {
             $scope.board = board;

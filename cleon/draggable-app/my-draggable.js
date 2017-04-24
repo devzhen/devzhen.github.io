@@ -4,7 +4,7 @@
 
         return {
             restrict: 'A',
-            controller: function ($scope, $element) {
+            controller: ['$scope', '$element', function ($scope, $element) {
                 if ($scope.screen == 1) {
                     $scope.drag_areas = ['drag-area1', 'drag-area2', 'drag-area3'];
                     $scope.stickerPositionVerificationFunction = screen1PositionVerification;
@@ -25,7 +25,7 @@
                     $scope.drag_areas = ['drag-area13', 'drag-area14', 'drag-area15', 'drag-area16'];
                     $scope.stickerPositionVerificationFunction = screen3RightPositionVerification;
                 }
-            },
+            }],
             link: function ($scope, element, attr) {
 
                 var startX = 0, startY = 0, x = 0, y = 0;

@@ -1,6 +1,6 @@
-(function (module) {
+(function (ngModule) {
 
-    module.factory('stickerServiceDOM', ['modalService', '$compile', 'stickerServiceJSON', function (modalService, $compile, stickerServiceJSON) {
+    ngModule.factory('stickerServiceDOM', ['modalService', '$compile', 'stickerServiceJSON', function (modalService, $compile, stickerServiceJSON) {
         return {
             createBigSticker: function ($elem, $event) {
 
@@ -35,7 +35,6 @@
             deleteBigSticker: function ($elem) {
                 var bigSticker = angular.element('.stiket-big');
                 var scope = bigSticker.scope();
-
                 bigSticker.remove();
                 scope.$destroy();
 

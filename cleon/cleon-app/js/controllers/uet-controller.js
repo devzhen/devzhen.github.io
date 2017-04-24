@@ -1,6 +1,6 @@
-(function (module) {
+(function (ngModule) {
 
-    module.controller('UetController', ['$scope', 'stickerServiceDOM', function ($scope, stickerServiceDOM) {
+    ngModule.controller('UetController', ['$scope', 'stickerServiceDOM', function ($scope, stickerServiceDOM) {
         $scope.currentUet = 1;
 
         this.isSetUet = function (uet) {

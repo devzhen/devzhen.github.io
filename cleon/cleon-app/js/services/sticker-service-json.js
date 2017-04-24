@@ -1,6 +1,6 @@
-(function (module) {
+(function (ngModule) {
 
-    module.factory('stickerServiceJSON', ['$compile', function ($compile) {
+    ngModule.factory('stickerServiceJSON', ['$compile', function ($compile) {
 
         return {
 

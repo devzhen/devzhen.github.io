@@ -52,7 +52,7 @@
                             });
 
                             /*close-button*/
-                            var closeButton = angular.element('<img id="closeButton" src="src/image-animate-app/images/exit.png"/>');
+                            var closeButton = angular.element('<img id="closeButton" src="image-animate-app/images/exit.png"/>');
                             $body.append(closeButton);
 
                             closeButton.on('load', function () {
