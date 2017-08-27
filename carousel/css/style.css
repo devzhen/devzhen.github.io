@@ -1,0 +1,178 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'ProximaNova-BoldIt';
+    src: url('../fonts/ProximaNova-BoldIt.eot');
+    src: url('../fonts/ProximaNova-BoldIt.eot') format('embedded-opentype'),
+    url('../fonts/ProximaNova-BoldIt.woff') format('woff'),
+    url('../fonts/ProximaNova-BoldIt.ttf') format('truetype'),
+    url('../fonts/ProximaNova-BoldIt.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    text-indent: 1.5em;
+
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/******************************************
+* Видео фон
+*******************************************/
+iframe {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    border: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/******************************************
+* Navbar
+*******************************************/
+nav {
+    background-color: #545454;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.icon-bar {
+    background-color: white !important;
+}
+
+.navbar-nav > li > a {
+    color: white !important;
+    font-family: ProximaNova-BoldIt, serif;
+}
+
+.navbar-nav > li > a > p {
+    margin: 0;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: transparent;
+}
+
+.navbar-nav > li > a:not( :hover ) {
+    background-color: transparent;
+}
+
+.navbar-brand {
+    color: white !important;
+    margin-top: 15px;
+}
+
+.choice {
+    position: absolute;
+    display: none;
+    width: 28px;
+    height: 28px;
+}
+
+/******************************************
+* Карусель
+*******************************************/
+.slide-window {
+    overflow: hidden;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #545454;
+}
+
+.slide-container {
+    width: 9999px;
+    height: 300px;
+    font-size: 0
+}
+
+.slides-margin-transition {
+    transition-property: margin-left;
+    transition-duration: 1s;
+}
+
+.slide {
+    border: 1px solid black;
+    width: 800px;
+    height: 300px;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: white;
+}
+
+.prev-slide, .next-slide {
+    position: absolute;
+    cursor: pointer;
+}
+
+/******************************************
+* Медиа запросы
+*******************************************/
+@media (max-width: 767px) {
+
+    .choice {
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        left: 90px;
+    }
+
+    .collapse {
+        margin-top: 0;
+    }
+
+    .navbar-nav > li > a {
+        font-size: 14px;
+    }
+
+    .navbar-brand {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .choice {
+        top: -15px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .collapse {
+        margin-top: 30px;
+    }
+
+    .navbar-nav > li {
+        text-align: center;
+    }
+
+    .navbar-nav > li > a {
+        font-size: 18px;
+    }
+
+    .navbar-nav > li > a:hover {
+        font-size: 20px;
+    }
+}
+
+

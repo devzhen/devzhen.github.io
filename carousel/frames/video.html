@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .is_overlay {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #trailer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        #trailer > video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /*min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;*/
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            #trailer > video { height: 300%; top: -100%; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            #trailer > video { width: 300%; left: -100%; }
+        }
+        /* Если есть поддержка object-fit (Chrome/Chrome для Android, Safari в iOS 8 и Opera), используем его: */
+        @supports (object-fit: cover) {
+            #trailer > video {
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                object-fit: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="trailer" class="is_overlay">
+    <video id="video" autoplay loop muted width="100%" height="auto" preload="auto">
+        <source src="../video/oceans.mp4" type='video/mp4'>
+        <source src="../video/oceans.ogv" type='video/ogg'>
+        <source src="../video/oceans.webm" type='video/webm'>
+    </video>
+</div>
+</body>
+</html>
