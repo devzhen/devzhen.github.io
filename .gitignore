@@ -1,5 +1,2 @@
 .idea
 bower_components
-node_modules
-/cleon/webpack.config.js
-/cleon/dist/
