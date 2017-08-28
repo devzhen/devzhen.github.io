@@ -126,10 +126,11 @@ nav {
 
 .dg-slide {
     /*border: 1px solid black;*/
+    border-right: 1px solid black;
     width: 1000px;
     height: 300px;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     cursor: pointer;
     font-size: 14px;
     background-color: white;
