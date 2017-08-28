@@ -1,8 +1,8 @@
 (function (angular) {
 
-    angular.module('testCarousel')
+    angular.module('dgCarousel')
 
-        .directive('dgCarousel', ['$window', '$rootScope', function ($window, $rootScope) {
+        .directive('dgCarousel', ['$document', '$window', '$rootScope', function ($document, $window, $rootScope) {
 
             return {
                 restrict: 'A',
@@ -15,19 +15,34 @@
                     var nextSlide = $element[0].lastElementChild;
 
                     /*Окно слайда*/
-                    var slideWindow = document.querySelector('div.slide-window');
+                    var slideWindow = document.querySelector('div.dg-slide-window');
 
                     /*Контейнер слайдов*/
-                    var slideContainer = document.querySelector('div.slide-container');
+                    var slideContainer = document.querySelector('div.dg-slide-container');
 
                     /*Установить позиции кнопок на странице*/
                     setControlButtonsPosition(slideWindow, prevSlide, nextSlide);
 
                     /*При изменении масштаба установить позиции кнопок на странице*/
                     angular.element($window).on('resize', function () {
-                        setControlButtonsPosition(slideWindow, prevSlide, nextSlide)
+
+                        $rootScope.$broadcast('dg-select', {
+                            select: $scope.activeSlide
+                        });
+
+                        setControlButtonsPosition(slideWindow, prevSlide, nextSlide);
+
                     });
 
+                    /*При раскрытии navbar на малых экранах перерисовать кнопки */
+                    angular.element($document).on('shown.bs.collapse', function (e) {
+                        setControlButtonsPosition(slideWindow, prevSlide, nextSlide);
+                    });
+
+                    /*При скрытии navbar на малых экранах перерисовать кнопки */
+                    angular.element($document).on('hidden.bs.collapse', function (e) {
+                        setControlButtonsPosition(slideWindow, prevSlide, nextSlide);
+                    });
 
                     $element.on('click', function (e) {
 
@@ -82,11 +97,16 @@
      */
     function setControlButtonsPosition(slide, prev, next) {
 
+        prev.classList.add('visible');
+        next.classList.add('visible');
+
         prev.style.top = getCoords(slide).top + slide.offsetHeight / 2 - prev.offsetHeight / 2 + 'px';
         prev.style.left = getCoords(slide).left - prev.offsetWidth + 'px';
 
         next.style.top = getCoords(slide).top + slide.offsetHeight / 2 - next.offsetHeight / 2 + 'px';
         next.style.left = getCoords(slide).left + slide.offsetWidth + 'px';
+
+
 
     }
 })(window.angular);

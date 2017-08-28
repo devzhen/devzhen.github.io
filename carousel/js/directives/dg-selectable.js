@@ -1,6 +1,6 @@
 (function (angular) {
 
-    var module = angular.module('testCarousel');
+    var module = angular.module('dgCarousel');
 
     module.directive('dgSelectable', ['$rootScope', function ($rootScope) {
 
