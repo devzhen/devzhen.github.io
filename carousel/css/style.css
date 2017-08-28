@@ -3,6 +3,14 @@ html, body {
     padding: 0;
 }
 
+body {
+    background-color: #1a3ee2;
+}
+
+.visible {
+    display: block !important;
+}
+
 @font-face {
     font-family: 'ProximaNova-BoldIt';
     src: url('../fonts/ProximaNova-BoldIt.eot');
@@ -16,7 +24,10 @@ html, body {
 
 p {
     text-indent: 1.5em;
+}
 
+h3, p, a {
+    font-family: ProximaNova-BoldIt, serif;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -89,28 +100,33 @@ nav {
 /******************************************
 * Карусель
 *******************************************/
-.slide-window {
+.dg-carousel {
+    margin-top: 100px;
+}
+
+.dg-slide-window {
     overflow: hidden;
-    width: 800px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
     background-color: #545454;
+    border: 1px solid black;
 }
 
-.slide-container {
+.dg-slide-container {
     width: 9999px;
     height: 300px;
     font-size: 0
 }
 
-.slides-margin-transition {
+.dg-slides-margin-transition {
     transition-property: margin-left;
     transition-duration: 1s;
 }
 
-.slide {
-    border: 1px solid black;
-    width: 800px;
+.dg-slide {
+    /*border: 1px solid black;*/
+    width: 1000px;
     height: 300px;
     display: inline-block;
     padding: 10px;
@@ -119,9 +135,10 @@ nav {
     background-color: white;
 }
 
-.prev-slide, .next-slide {
+.dg-prev-slide, .dg-next-slide {
     position: absolute;
     cursor: pointer;
+    display: none;
 }
 
 /******************************************
@@ -146,6 +163,14 @@ nav {
 
     .navbar-brand {
         margin-top: 0;
+    }
+
+    .dg-carousel {
+        margin-top: 10px;
+    }
+
+    .dg-slide-window {
+        margin-left: 50px;
     }
 }
 
@@ -175,4 +200,26 @@ nav {
     }
 }
 
+@media (max-width: 1130px) {
+    .dg-carousel {
+        margin-top: 50px;
+    }
 
+    .dg-slide-window {
+        width: 800px;
+    }
+
+    .dg-slide {
+        width: 800px;
+    }
+}
+
+@media (max-width: 902px) {
+    .dg-slide-window {
+        width: 600px;
+    }
+
+    .dg-slide {
+        width: 600px;
+    }
+}
