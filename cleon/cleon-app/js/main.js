@@ -14,13 +14,6 @@
         $rootScope.THIRD_UET = 3;
         $rootScope.FOURTH_UET = 4;
         $rootScope.FIFTH_UET = 5;
-
-        // ctrl + shift + s
-        angular.element(document).on('keypress', function (e) {
-            if (e.shiftKey && e.ctrlKey && e.keyCode == 19) {
-                console.log(stickerServiceJSON.getAllStickersJSON());
-            }
-        });
     }]);
 
 })(window.angular);
