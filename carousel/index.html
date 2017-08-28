@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="testCarousel">
+<html lang="en" ng-app="dgCarousel">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Carousel</title>
+    <title>Test Carousel</title>
 
     <!-- Bootstrap -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -57,17 +57,17 @@
 
     <div class="row">
 
-        <div dg-carousel>
+        <div dg-carousel class="dg-carousel">
 
-            <div class="prev-slide">
+            <div class="dg-prev-slide">
                 <img id="prev" src="img/prev.png">
             </div>
 
-            <div class="slide-window">
+            <div class="dg-slide-window">
 
-                <div dg-slide-container class="slide-container slides-margin-transition">
+                <div dg-slide-container class="dg-slide-container dg-slides-margin-transition">
 
-                    <div class="slide">
+                    <div class="dg-slide">
                         <h3>Проекты</h3><br><br>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
@@ -91,7 +91,7 @@
                             rutrum
                         </p>
                     </div>
-                    <div class="slide">
+                    <div class="dg-slide">
                         <h3>Услуги</h3><br><br>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
@@ -115,7 +115,7 @@
                             rutrum
                         </p>
                     </div>
-                    <div class="slide">
+                    <div class="dg-slide">
                         <h3>Компания</h3><br><br>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
@@ -139,7 +139,7 @@
                             rutrum
                         </p>
                     </div>
-                    <div class="slide">
+                    <div class="dg-slide">
                         <h3>Контакты</h3><br><br>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
@@ -163,7 +163,7 @@
                             rutrum
                         </p>
                     </div>
-                    <div class="slide">
+                    <div class="dg-slide">
                         <h3>Блог</h3><br><br>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
@@ -192,7 +192,7 @@
 
             </div>
 
-            <div class="next-slide">
+            <div class="dg-next-slide">
                 <img id="next" src="img/next.png">
             </div>
 
@@ -202,11 +202,11 @@
 
 </div>
 
-<iframe src="frames/video.html"></iframe>
+<!--<iframe src="frames/video.html"></iframe>-->
 
-<script src="assets/jquery/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/angular/angular.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/directives/dg-carousel.js"></script>
 <script src="js/directives/dg-selectable.js"></script>
