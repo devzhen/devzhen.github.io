@@ -19,7 +19,7 @@
         };
     }
 
-    var module = angular.module('testCarousel', []);
+    var module = angular.module('dgCarousel', []);
 
 
     this.getCoords = function (elem) {
