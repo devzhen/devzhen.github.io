@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom scrollbars demo</title>
+
+    <link rel="stylesheet" href="css/dg-custom-scrollbar.min.css"/>
+
+    <script src="js/dg-custom-scrollbars.min.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .x-scroll {
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
+
+        .x-y-scroll {
+            overflow-x: scroll;
+            overflow-y: scroll;
+        }
+
+        .left-column, .right-column {
+            width: 49%;
+            text-align: center;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .row, .first-row {
+            text-align: center;
+        }
+
+        .row {
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="first-row">
+    <div class="left-column">
+
+        <h1>Without custom scrollbars</h1>
+
+        <textarea cols="30" rows="10">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem  sit amet  leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+    </textarea>
+
+    </div>
+    <div class="right-column">
+
+        <h1>With custom scrollbars</h1>
+
+        <textarea id="test1" cols="30" rows="10">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem  sit amet  leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+    </textarea>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="left-column">
+    <textarea class="x-scroll" cols="30" rows="10">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem  sit amet  leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+    </textarea>
+    </div>
+    <div class="right-column">
+    <textarea id="test2" class="x-scroll" cols="30" rows="10">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem  sit amet  leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+                </textarea>
+    </div>
+</div>
+
+<div class="row">
+    <div class="left-column">
+    <textarea class="x-y-scroll" cols="30" rows="10">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem  sit amet  leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+    </textarea>
+    </div>
+    <div class="right-column">
+    <textarea id="test3" class="x-y-scroll" cols="30" rows="10">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem  sit amet  leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+    </textarea>
+    </div>
+</div>
+
+<div class="row">
+    <div class="left-column">
+        <div style="height: 300px; border: 1px solid black; width: 95%; overflow: scroll">
+            <div style="width: 2000px; height: 300px">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed
+                    ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at
+                    massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius
+                    odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem sit amet leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div id="test4" style="height: 300px; border: 1px solid black; width: 95%; overflow: scroll">
+            <div style="width: 2000px; height: 300px">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra nulla justo. Mauris
+                    vestibulum eros nunc, varius condimentum felis hendrerit et. Proin molestie sem eget lacinia
+                    ultrices. Maecenas congue velit molestie justo porttitor, et convallis orci iaculis. Sed
+                    ultrices
+                    dolor vel erat dignissim aliquam a in risus. Maecenas vel rutrum enim. Donec vulputate leo at
+                    massa
+                    efficitur, sit amet elementum nibh fringilla. Nunc mattis neque ac augue porttitor, in varius
+                    odio
+                    bibendum. Morbi faucibus nibh vitae purus mollis lobortis. Nulla suscipit sem sit amet leo
+                    ultrices, non pellentesque ex viverra. Suspendisse potenti. Nam auctor dolor libero, nec rutrum
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <button id="add-textarea">Add textarea</button>
+</div>
+
+<div class="row">
+    <textarea id="test5" cols="30" rows="10">Cut or paste text content
+
+    </textarea>
+</div>
+
+<div class="row">
+    <div style="width: 2000px; height: 300px; border: 1px solid black; margin-right: 500px; text-align: left">This is a
+        div for testing custom scroll bars for the page
+    </div>
+</div>
+
+<script>
+
+    function getCoords(HTMLElement) {
+
+        var box = HTMLElement.getBoundingClientRect();
+
+        var body = document.body;
+        var docEl = document.documentElement;
+
+        var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+        var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+        var clientTop = docEl.clientTop || body.clientTop || 0;
+        var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+        var top = box.top + scrollTop - clientTop;
+        var left = box.left + scrollLeft - clientLeft;
+
+        return {
+            top: top,
+            left: left
+        };
+    }
+
+    function makeDraggable(HTMLElement) {
+
+        HTMLElement.style.cursor = 'move';
+
+        HTMLElement.addEventListener('mousedown', function (e) {
+
+            /*Координаты горизонтального ползунка*/
+            var coords = getCoords(HTMLElement);
+
+            /*Смещение курсора*/
+            var shiftX = e.pageX - coords.left;
+            var shiftY = e.pageY - coords.top;
+
+            HTMLElement.style.position = 'absolute';
+
+//            document.body.appendChild(HTMLElement);
+
+            document.addEventListener('mousemove', mouseMoveHandler);
+
+            document.addEventListener('mouseup', mouseUpHandler);
+
+            function mouseMoveHandler(e) {
+                HTMLElement.style.left = e.pageX - shiftX + 'px';
+                HTMLElement.style.top = e.pageY - shiftY + 'px';
+
+                CustomScrollbar.notifyAllCustomScrollbars();
+            }
+
+            function mouseUpHandler() {
+                document.removeEventListener('mousemove', mouseMoveHandler);
+                document.removeEventListener('mouseup', mouseUpHandler);
+            }
+        });
+    }
+</script>
+
+<script>
+
+    var textarea1 = document.getElementById('test1');
+    var cs1 = new CustomScrollbar(textarea1);
+
+    makeDraggable(textarea1);
+
+    var textarea2 = document.getElementById('test2');
+    var cs2 = new CustomScrollbar(textarea2);
+
+    var textarea3 = document.getElementById('test3');
+    var cs3 = new CustomScrollbar(textarea3);
+
+    var div = document.getElementById('test4');
+    var cs4 = new CustomScrollbar(div);
+
+    var button = document.getElementById('add-textarea');
+    button.onclick = function () {
+
+        var dynamic_textarea = document.createElement('textarea');
+        button.parentElement.insertBefore(dynamic_textarea, button);
+        dynamic_textarea.cols = 30;
+        dynamic_textarea.rows = 10;
+        dynamic_textarea.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+            'Aenean pharetra nulla justo. Mauris vestibulum eros nunc, varius condimentum felis hendrerit et. ' +
+            'Proin molestie sem eget lacinia ultrices. Maecenas congue velit molestie justo porttitor, et ' +
+            'convallis orci iaculis. Sed ultrices dolor vel erat dignissim aliquam a in risus. Maecenas vel ' +
+            'rutrum enim. Donec vulputate leo at massa efficitur, sit amet elementum nibh fringilla. Nunc ' +
+            'mattis neque ac augue porttitor, in varius odio bibendum. Morbi faucibus nibh vitae purus mollis ' +
+            'lobortis. Nulla suscipit sem sit amet leo ultrices, non pellentesque ex viverra. Suspendisse potenti. ' +
+            'Nam auctor dolor libero, nec rutrum';
+        var cs5 = new CustomScrollbar(dynamic_textarea);
+    };
+
+    var textarea5 = document.getElementById('test5');
+    var cs6 = new CustomScrollbar(textarea5);
+
+    var cs7 = new CustomScrollbar(document.body);
+</script>
+</body>
+</html>
