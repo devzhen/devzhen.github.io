@@ -1,6 +1,6 @@
 (function (ngModule) {
     ngModule.controller('ScreenController', ['$scope', function ($scope) {
-        $scope.currentScreen = 1;
+        $scope.currentScreen = 2;
 
         this.isSetScreen = function (screen) {
             return (screen == $scope.currentScreen);
