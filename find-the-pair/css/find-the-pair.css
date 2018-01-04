@@ -1,0 +1,234 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.disable-content {
+    pointer-events: none;
+}
+
+.disable-content-opacity {
+    opacity: 0.5;
+}
+
+.no-display {
+    display: none !important;
+}
+
+.no-visibility {
+    visibility: hidden !important;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}.game-config {
+    display: -ms-flex;
+    -ms-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+}
+
+.game-config select{
+    border-radius: 10px;
+    outline: none;
+}
+
+.game-field-size select{
+    width: 30%;
+}
+
+.game-color-scheme select{
+    width: 30%;
+}.game-field-panel {
+    display: -ms-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.game-field {
+    display: -ms-flex;
+    -ms-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: calc(100% - 8px - 8px);
+    margin: 8px;
+}
+
+.game-field-row {
+    display: -ms-flex;
+    display: flex;
+    -ms-flex: 100 1 auto;
+    flex: 100 1 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.game-field-cell {
+    -ms-flex: 100 1 auto;
+    flex: 100 1 auto;
+    position: relative;
+    border: thin solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 5px grey;
+}
+
+.game-field-cell img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.game-field-controls {
+    display: -ms-flex;
+    -ms-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+    width: 20%;
+    padding: 10px;
+    font-size: 70%;
+    border-left: thin solid black;
+}
+
+.game-field-controls button {
+    box-shadow: 2px 2px 10px grey;
+}
+
+.game-save-result {
+    display: -ms-flex;
+    -ms-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.game-save-result button {
+    width: 30%;
+    box-shadow: 2px 2px 10px grey;
+}.game-records {
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    padding: 10px;
+}
+
+.game-records-tab-list {
+    display: -ms-flex;
+    display: flex;
+    align-content: center;
+    height: 10%;
+    width: 70%;
+}
+
+.game-records-tab-list a {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -ms-flex: 100 1 auto;
+    flex: 100 1 auto;
+
+    padding: 10px;
+    border: thin solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 10px grey;
+}
+
+.game-records-tab-list a.active {
+    background-color: lightgray;
+}
+
+.game-records-tab-content {
+    display: -ms-flex;
+    display: flex;
+    padding: 20px;
+}.tabbed-window {
+    display: -ms-flex;
+    -ms-flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+
+    border: thin solid black;
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 10px grey;
+}
+
+.tab-list {
+    display: -ms-flex;
+    display: flex;
+}
+
+.tab-list a {
+    box-shadow: 0 0 10px grey;
+}
+
+.tab-list > a:first-child {
+    border-top-left-radius: 20px
+}
+
+.tab-list > a:last-child {
+    border-top-right-radius: 20px
+}
+
+.tab {
+    -ms-flex: 100 1 auto;
+    flex: 100 1 auto;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    padding: 10px;
+    border: thin solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+.tab-active {
+    background-color: lightgray;
+}
+
+.tab-content {
+    display: -ms-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
