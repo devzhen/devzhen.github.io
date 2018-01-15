@@ -16342,7 +16342,7 @@ exports.default = function (store) {
 
             if (action.type === _constants.GET_WEATHER_AND_FORECAST) {
 
-                var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
+                var weatherUrl = "https://api.openweathermap.org/data/2.5/weathersss?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
                 var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
 
                 if (action.payload.cityName === null) {
