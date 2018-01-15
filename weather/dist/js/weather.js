@@ -16537,7 +16537,7 @@ exports.default = function (store) {
 
             if (action.type === _constants.GET_WEATHER) {
 
-                var url = "http://api.openweathermap.org/data/2.5/weather?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
+                var url = "https://api.openweathermap.org/data/2.5/weather?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
 
                 /*Если поиск погоды по географическим координатам*/
                 if (action.payload.cityName === null) {
@@ -16747,7 +16747,7 @@ exports.default = function (store) {
 
             if (action.type === _constants.GET_FORECAST) {
 
-                var url = "http://api.openweathermap.org/data/2.5/forecast?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
+                var url = "https://api.openweathermap.org/data/2.5/forecast?APPID=650a122361b5457a1e5493f257f434c1&units=metric";
 
                 /*Если поиск погоды по географическим координатам*/
                 if (action.payload.cityName === null) {
