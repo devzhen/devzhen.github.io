@@ -5,3 +5,6 @@ Custom scrollbars demo - <a href="https://devzhen.github.io/dg-custom-scrollbars
 <br>
 <br>
 The game - 'Find the pair' demo - <a href="https://devzhen.github.io/find-the-pair">https://devzhen.github.io/find-the-pair</a>
+<br>
+<br>
+The weather app - <a href="https://devzhen.github.io/weather">https://devzhen.github.io/weather</a>
