@@ -1,0 +1,120 @@
+#root {
+  padding: 25px;
+  height: 100%;
+}
+
+.gallery {
+  position: relative;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .08);
+  border: 1px solid rgba(123, 176, 255, 0.1);
+  background: rgba(186, 221, 255, 0.29);
+  height: 70%;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.galleryControls {
+  height: 50px;
+  /* background-color: black;
+  border-bottom: solid 3px #ffd700; */
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  padding: 5px;
+  border-radius: 3px 3px 0 0;
+}
+
+.galleryControls input {
+  flex: 1;
+  outline: none;
+  padding: 0 10px;
+  font-size: 90%;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #8fc2f5;
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: -1px 0 5px rgba(0, 0, 0, .1) inset;
+}
+
+.galleryControls button {
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #8fc2f5;
+  border-left: none;
+  font-size: 100%;
+  width: 150px;
+}
+
+.galleryControls button:hover {
+  background: #eee;
+}
+
+.galleryControls button:active {
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, .2) inset;
+}
+
+.galleryItems {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.galleryItems:before,
+.galleryItems:after {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  content: '';
+  display: block;
+}
+
+.galleryItems:before {
+  background: linear-gradient(to bottom, rgb(237, 246, 255) 0%, rgba(237, 246, 255, 0.738) 19%, rgba(237, 246, 255, 0.541) 34%, rgba(237, 246, 255, 0.382) 47%, rgba(237, 246, 255, 0.278) 56.5%, rgba(237, 246, 255, 0.194) 65%, rgba(237, 246, 255, 0.126) 73%, rgba(237, 246, 255, 0.075) 80.2%, rgba(237, 246, 255, 0.042) 86.1%, rgba(237, 246, 255, 0.021) 91%, rgba(237, 246, 255, 0.008) 95.2%, rgba(237, 246, 255, 0.002) 98.2%, transparent 100%);
+}
+.galleryItems:after {
+  bottom: 0;
+  background: linear-gradient(to top, rgb(237, 246, 255) 0%, rgba(237, 246, 255, 0.738) 19%, rgba(237, 246, 255, 0.541) 34%, rgba(237, 246, 255, 0.382) 47%, rgba(237, 246, 255, 0.278) 56.5%, rgba(237, 246, 255, 0.194) 65%, rgba(237, 246, 255, 0.126) 73%, rgba(237, 246, 255, 0.075) 80.2%, rgba(237, 246, 255, 0.042) 86.1%, rgba(237, 246, 255, 0.021) 91%, rgba(237, 246, 255, 0.008) 95.2%, rgba(237, 246, 255, 0.002) 98.2%, transparent 100%);
+}
+
+.galleryItems > ul {
+  padding: 15px;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 7px;
+  grid-auto-flow: dense;
+}
+
+.galleryItems li:nth-child(6n+1) {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.galleryItems li:nth-child(3n+1) {
+  grid-column-end: span 2;
+}
+
+.galleryItems li:nth-child(9n) {
+  grid-row-end: span 2;
+}
+
+.galleryItems img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 4px;
+  background-color: white;
+}
+
+body {
+  background: url("../resources/images/wix-logo.svg") no-repeat 99% 99%;
+  background-size: 350px;
+}
