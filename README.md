@@ -8,3 +8,5 @@ The game - 'Find the pair' demo - <a href="https://devzhen.github.io/find-the-pa
 <br>
 <br>
 The weather app - <a href="https://devzhen.github.io/weather">https://devzhen.github.io/weather</a>
+<br>
+The gallery app - <a href="https://devzhen.github.io/gallery">https://devzhen.github.io/gallery</a>
